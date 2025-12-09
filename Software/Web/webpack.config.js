@@ -39,6 +39,10 @@ const basePlugins = [
     filename: "[name].css",
     chunkFilename: "[id].css"
   }),
+  // Ensure mobx-react can access the $mobx symbol when bundling
+  new webpack.ProvidePlugin({
+    $mobx: ['mobx', '$mobx']
+  }),
   // new ForkTsCheckerWebpackPlugin({
   //   tsconfig: path.resolve(__dirname, "tsconfig.json")
   // })
@@ -47,7 +51,7 @@ const basePlugins = [
 
 const devPlugins = [
   new webpack.DefinePlugin({
-    APIROOTURL: JSON.stringify("http://localhost:5000/api/")
+    APIROOTURL: JSON.stringify("http://localhost:5001/api/")
   }),
 
 ];
