@@ -1,3 +1,5 @@
+# Legacy pip requirements (kept for reference).
+# Prefer uv: `uv sync` uses `pyproject.toml` + `uv.lock`.
 keras
 cvxopt
 beautifulsoup4

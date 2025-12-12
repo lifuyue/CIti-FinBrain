@@ -2,7 +2,7 @@
 
 # 使用技术
 
-- Python 3（>=3.7）
+- Python 3（>=3.7,<3.11）
 - Flask
 - SQLite + SQLAlchemy
 - Flask-Restplus
@@ -19,9 +19,17 @@
 2. SQLAlchemy，[廖雪峰教程](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/0014320114981139589ac5f02944601ae22834e9c521415000)
 
 
-## 安装依赖
+## 安装依赖（uv）
 
-`pip install -r requirements.txt`
+1. 在后端目录创建/同步虚拟环境与依赖：  
+   `cd Software/Backend && uv sync`
+2. 运行服务：  
+   `uv run python run.py`
+
+如需使用国内镜像：  
+`cd Software/Backend && uv sync --default-index https://pypi.tuna.tsinghua.edu.cn/simple`
+
+更新依赖：修改 `pyproject.toml` 后运行 `uv lock`，再执行 `uv sync`。
 
 ## 进入Swagger文档
 

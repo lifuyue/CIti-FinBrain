@@ -3,3 +3,4 @@ testdb.db
 .idea/**
 nohup.out
 .venv/
+.uv-cache/

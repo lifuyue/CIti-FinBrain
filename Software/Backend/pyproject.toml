@@ -1,0 +1,33 @@
+[project]
+name = "citi-finbrain-backend"
+version = "0.1.0"
+description = "FinBrain Flask REST API backend"
+requires-python = ">=3.7,<3.11"
+dependencies = [
+  "keras~=2.8.0",
+  "cvxopt",
+  "beautifulsoup4",
+  "requests",
+  "scikit-learn",
+  "sqlalchemy<2",
+  "Flask<2",
+  "Jinja2",
+  "flask-restplus",
+  "Flask-SQLAlchemy<3",
+  "jsonschema",
+  "six",
+  "swagger-py-codegen",
+  "PyJWT",
+  "flask-cors",
+  "pandas",
+  "numpy<2",
+  "scipy",
+  "Cython",
+  "jqdatasdk",
+  "tushare",
+  "tensorflow~=2.8.0; sys_platform != 'darwin' or platform_machine != 'arm64'",
+  "tensorflow-macos~=2.8.0; sys_platform == 'darwin' and platform_machine == 'arm64'",
+  # Pin legacy Flask/RESTPlus stack per codex/init/SKILL.md
+  "Werkzeug<1",
+  "MarkupSafe<2",
+]

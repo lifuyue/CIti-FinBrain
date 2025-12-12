@@ -6,7 +6,7 @@
 - Research docs and assets live in `Doc/`, `Reference/`, `Data/`, `Asset Allocation/`, `大类资产配置`, and `static/`; keep code and data separated.
 
 ## Build, Test, and Development Commands
-- Backend: `cd Software/Backend && pip install -r requirements.txt`; `python run.py` starts the dev server on :5000 with Swagger at `/api`; adjust `config.py` for Citi sandbox keys before hitting live APIs.
+- Backend: `cd Software/Backend && uv sync`; start dev server with `uv run python run.py` (Swagger at `/api`); adjust `config.py` for Citi sandbox keys before hitting live APIs. Legacy `requirements.txt` is kept for reference.
 - Frontend: `cd Software/Web && npm install`; `npm start` for the dev server with HMR; `npm run build` for a production bundle and `npm run serveProd` to preview `dist/`; `npm run lint` applies TSLint fixes; `npm test` runs Mocha specs (`src/**/*.spec.ts*`).
 - Utility: `restart.sh` is available if you need to reset local services or processes (review the script before use).
 

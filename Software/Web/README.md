@@ -12,8 +12,14 @@
 
 ## 运行
 
-1. `npm install`，安装依赖
-2. `npm start`，开始开发
+1. 安装依赖（建议使用官方源并忽略旧 lockfile）：  
+   `npm install --registry=https://registry.npmjs.org --legacy-peer-deps --no-package-lock`
+2. 启动开发服务器（webpack 4 在新 Node 版本需 legacy OpenSSL）：  
+   `BROWSER=none NODE_OPTIONS=--openssl-legacy-provider npm start`
+
+默认访问地址：`http://localhost:3000/`  
+如 macOS 监听不稳定，可用轮询启动：  
+`WATCHPACK_POLLING=true CHOKIDAR_USEPOLLING=1 WATCHPACK_DISABLE_CHOKIDAR=true BROWSER=none PORT=3000 HOST=0.0.0.0 NODE_OPTIONS=--openssl-legacy-provider npm start`
 
 ## 许可
 
